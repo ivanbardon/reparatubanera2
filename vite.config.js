@@ -4,7 +4,7 @@ import tailwindcss from '@tailwindcss/vite'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/reparatubanera2/',
+  base: '/reparatubanera2',
   plugins: [
     react(),
     tailwindcss()

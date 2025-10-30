@@ -1,14 +1,15 @@
 import React from 'react'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 export default function App() {
   return (
     <>
       <nav>
         <ul className="flex space-x-4 items-center justify-center p-4">
-          <li><a href="#" className="text-blue-500">Inicio</a></li>
-          <li><a href="#" className="text-blue-500">Trabajos</a></li>
-          <li><a href="#" className="text-blue-500">Servicios</a></li>
-          <li><a href="#" className="text-blue-500">Contacto</a></li>
+            <li><a href="#" className="text-blue-500">Inicio</a></li>
+            <li><a href="#" className="text-blue-500">Trabajos</a></li>
+            <li><a href="#" className="text-blue-500">Servicios</a></li>
+            <li><a href="#" className="text-blue-500">Contacto</a></li>
         </ul>
       </nav>
       <header>
@@ -18,7 +19,7 @@ export default function App() {
         </div>
       </header>
       <section>
-        <img src="public/banera1.jpeg" alt="Bañera portada" />
+        <img src="banera1.jpeg" alt="Bañera portada" />
       </section>
       <section>
         <h2>Nos elijen porque somos</h2>
@@ -64,16 +65,16 @@ export default function App() {
         <h2>Trabajos Realizados</h2>
         <div className="grid grid-cols-1 gap-4 mt-4">
           <div>
-            <img src="public/plato1e.jpg" alt="Trabajo 1" className="w-full h-auto" />
+            <img src="plato1e.jpg" alt="Trabajo 1" className="w-full h-auto" />
           </div>
           <div>
-            <img src="public/banera2b.jpg" alt="Trabajo 2" className="w-full h-auto" />
+            <img src="banera2b.jpg" alt="Trabajo 2" className="w-full h-auto" />
           </div>
           <div>
-            <img src="public/banera1b.jpg" alt="Trabajo 3" className="w-full h-auto" />
+            <img src="banera1b.jpg" alt="Trabajo 3" className="w-full h-auto" />
           </div>
           <div>
-            <img src="public/agu1c.jpg" alt="Trabajo 4" className="w-full h-auto" />
+            <img src="agu1c.jpg" alt="Trabajo 4" className="w-full h-auto" />
           </div>
         </div>
         <button className="mt-4 bg-blue-500 text-white py-2 px-4 rounded">Ver Más Trabajos</button>
@@ -86,5 +87,6 @@ export default function App() {
         <p>&copy; 2023 ReparaTuBañera. Todos los derechos reservados.</p>
       </footer>
     </>
+    
   )
 }
