@@ -20,6 +20,7 @@ export default function App() {
         <Route path="/trabajos" element={<Trabajos />} />
         <Route path="/servicios" element={<Servicios />} />
         <Route path="/contacto" element={<Contacto />} />
+        <Route path="/trabajos/:id" element={<Trabajos />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>

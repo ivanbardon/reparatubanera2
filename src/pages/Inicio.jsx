@@ -1,4 +1,5 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 
 export default function Inicio() {
   return (
@@ -56,15 +57,22 @@ export default function Inicio() {
         <h2>Trabajos Realizados</h2>
         <div className="grid grid-cols-1 gap-4 mt-4">
           <div>
+            
+          </div>
+          <div>
+            <NavLink to="/trabajos">Ver más trabajos</NavLink>
             <img src="plato1e.jpg" alt="Trabajo 1" className="w-full h-auto" />
           </div>
           <div>
+            <NavLink to="/trabajos">Ver más trabajos</NavLink>
             <img src="banera2b.jpg" alt="Trabajo 2" className="w-full h-auto" />
           </div>
           <div>
+            <NavLink to="/trabajos">Ver más trabajos</NavLink>
             <img src="banera1b.jpg" alt="Trabajo 3" className="w-full h-auto" />
           </div>
           <div>
+            <NavLink to="/trabajos">Ver más trabajos</NavLink>
             <img src="agu1c.jpg" alt="Trabajo 4" className="w-full h-auto" />
           </div>
         </div>

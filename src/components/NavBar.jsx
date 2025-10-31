@@ -6,12 +6,12 @@ import { NavLink } from "react-router-dom"
 export default function NavBar() {
   return (
     <>
-    <nav>
+    <nav className="fixed top-0 left-0 w-full bg-white z-10">
       <ul className="flex space-x-4 items-center justify-center p-4">
-        <li><NavLink to="/" className="text-blue-500">Inicio</NavLink></li>
-        <li><NavLink to="/trabajos" className="text-blue-500">Trabajos</NavLink></li>
-        <li><NavLink to="/servicios" className="text-blue-500">Servicios</NavLink></li>
-        <li><NavLink to="/contacto" className="text-blue-500">Contacto</NavLink></li>
+        <li><NavLink  to="/" className={({ isActive }) => (isActive ? "text-blue-500" : "")}>Inicio</NavLink></li>
+        <li><NavLink to="/trabajos" className={({ isActive }) => (isActive ? "text-blue-500" : "")}>Trabajos</NavLink></li>
+        <li><NavLink to="/servicios" className={({ isActive }) => (isActive ? "text-blue-500" : "")}>Servicios</NavLink></li>
+        <li><NavLink to="/contacto" className={({ isActive }) => (isActive ? "text-blue-500" : "")}>Contacto</NavLink></li>
       </ul>
     </nav>
     </>
