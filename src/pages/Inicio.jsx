@@ -5,7 +5,7 @@ export default function Inicio() {
     <>
       <header>
         <div className="flex flex-col items-center justify-center mt-10 ">
-          <h1 className="text-3xl font-bold">ReparatuBañera</h1>
+          <h1 className="text-3xl font-bold">ReparatuPutaBañera</h1>
           <p className="text-sm text-gray-600">En ReparatuBañera.com somos especialistas en la reparación y esmaltado de bañeras y platos de ducha</p>
         </div>
       </header>
