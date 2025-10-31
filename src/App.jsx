@@ -13,7 +13,7 @@ import NavBar from "./components/NavBar"
 export default function App() {
   return (
     <>
-    <BrowserRouter>
+    <BrowserRouter basename={import.meta.env.BASE_URL}>
       <NavBar />
       <Routes>
         <Route path="/" element={<Inicio />} />

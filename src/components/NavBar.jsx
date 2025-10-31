@@ -7,7 +7,7 @@ export default function NavBar() {
     <>
     <nav>
       <ul className="flex space-x-4 items-center justify-center p-4">
-        <li><Link to="/" className="text-blue-500">Inicio</Link></li>
+        <li><Link to="/reparatubanera2" className="text-blue-500">Inicio</Link></li>
         <li><Link to="/trabajos" className="text-blue-500">Trabajos</Link></li>
         <li><Link to="/servicios" className="text-blue-500">Servicios</Link></li>
         <li><Link to="/contacto" className="text-blue-500">Contacto</Link></li>
