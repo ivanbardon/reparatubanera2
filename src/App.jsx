@@ -3,6 +3,7 @@ import Inicio from "./pages/Inicio"
 import Trabajos from "./pages/Trabajos"
 import Servicios from "./pages/Servicios"
 import Contacto from "./pages/Contacto"
+import NotFound from "./pages/NotFound"
 
 
 
@@ -15,10 +16,11 @@ export default function App() {
     <BrowserRouter>
       <NavBar />
       <Routes>
-        <Route path="/*" element={<Inicio />} />
+        <Route path="/" element={<Inicio />} />
         <Route path="/trabajos" element={<Trabajos />} />
         <Route path="/servicios" element={<Servicios />} />
         <Route path="/contacto" element={<Contacto />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
 
