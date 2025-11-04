@@ -70,8 +70,8 @@ export default function Trabajos() {
   };
 
   return (
-    <section className="p-4 text-center mt-16">
-      <h2 className="text-2xl font-bold mb-6">Trabajos Realizados</h2>
+    <section className="px-4 text-center mt-16">
+      <h2 className="text-2xl mb-6">Algunos de nuestros trabajos realizados</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         {trabajosData.map((trabajo) => (
           <div key={trabajo.id} className="bg-white rounded-lg shadow-md overflow-hidden text-left">
