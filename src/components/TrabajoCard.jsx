@@ -6,12 +6,12 @@ export default function TrabajoCard({ trabajo }) {
       <div className="relative">
         <img src={trabajo.images[0]} alt={trabajo.title} className="w-full h-56 object-cover" />
       </div>
-      <div className="p-4 bg-white">
-        <h3 className="text-lg font-semibold mb-2 text-gray-800">{trabajo.title}</h3>
-        <p className="text-gray-600 text-sm mb-4">
+      <div className="p-4 bg-card text-card-foreground">
+        <h3 className="text-lg font-semibold mb-2">{trabajo.title}</h3>
+        <p className="text-muted-foreground text-sm mb-4">
           {trabajo.description}
         </p>
-        <div className="text-sm text-gray-500 space-y-1">
+        <div className="text-sm text-muted-foreground space-y-1">
           {Object.entries({
             "Tiempo": trabajo.tiempo,
             "Obra necesaria": trabajo.obraNecesaria,

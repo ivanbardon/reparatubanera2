@@ -9,7 +9,7 @@ export default function TrabajoDetail({ trabajo, onBackClick }) {
     <div className="container mx-auto px-4 py-12">
       <button 
         onClick={onBackClick}
-        className="mb-8 bg-blue-500 text-white font-bold py-2 px-4 rounded-lg hover:bg-blue-600 transition-colors duration-300"
+        className="mb-8 bg-primary text-primary-foreground font-bold py-2 px-4 rounded-lg hover:bg-primary/90 transition-colors duration-300"
       >
         &larr; Volver a Trabajos
       </button>

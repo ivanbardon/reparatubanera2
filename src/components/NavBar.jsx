@@ -22,14 +22,14 @@ export default function NavBar() {
     const normalizedHref = href.endsWith('.html') ? href : `${href}index.html`;
     
     if (normalizedPath === normalizedHref || (path === '/reparatubanera2/' && href === '/reparatubanera2/')) {
-      return `${baseClass} border-black`;
+      return `${baseClass} border-foreground`;
     }
-    return `${baseClass} border-transparent hover:border-black`;
+    return `${baseClass} border-transparent hover:border-foreground`;
   };
 
   return (
     <>
-    <nav className="fixed top-4 left-4 right-4 rounded-full border border-gray-200 shadow-md bg-white/50 backdrop-blur-sm z-10">
+    <nav className="fixed top-4 left-4 right-4 rounded-full border shadow-md bg-background/50 backdrop-blur-sm z-10">
       <ul className="flex space-x-4 items-center justify-center p-4">
         <li><img src="/reparatubanera2/favicon.svg" alt="Logo" className="h-8" /></li>
         <li><a href="/reparatubanera2/" className={getLinkClass("/reparatubanera2/")}>Inicio</a></li>

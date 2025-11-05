@@ -6,7 +6,7 @@ const CallToAction = () => {
   const phoneNumber = '+34666777888';
   const whatsappUrl = `https://wa.me/${phoneNumber.replace(/\+/g, '')}`;
 
-  const buttonStyle = "flex items-center justify-center gap-2 px-3 py-2 text-sm font-medium text-white bg-blue-600 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-all duration-200";
+  const buttonStyle = "flex items-center justify-center gap-2 px-3 py-2 text-sm font-medium rounded-md transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 bg-primary text-primary-foreground hover:bg-primary/90";
 
   return (
     <div className="flex justify-center my-6">

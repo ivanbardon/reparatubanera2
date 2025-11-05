@@ -4,10 +4,10 @@ export default function Footer() {
   return (
     <footer className="text-center py-6 mt-12">
       <p className="font-semibold">Áreas de actuación:</p>
-      <p className="text-gray-600 dark:text-gray-400">Cataluña: Barcelona, Tarragona, Lleida i Girona</p>
-      <p className="text-gray-600 dark:text-gray-400">Comunidad Valenciana: Valencia, Castellón y Alicante</p>
-      <p className="text-gray-600 dark:text-gray-400">Comunidad de Madrid: Madrid y alrededores</p>
-      <p className='pt-8 text-sm text-gray-500'>&copy; 2025 ReparaTuBañera. Todos los derechos reservados.</p>
+      <p className="text-muted-foreground">Cataluña: Barcelona, Tarragona, Lleida i Girona</p>
+      <p className="text-muted-foreground">Comunidad Valenciana: Valencia, Castellón y Alicante</p>
+      <p className="text-muted-foreground">Comunidad de Madrid: Madrid y alrededores</p>
+      <p className='pt-8 text-sm text-muted-foreground'>&copy; 2025 ReparaTuBañera. Todos los derechos reservados.</p>
     </footer>
   )
 }
