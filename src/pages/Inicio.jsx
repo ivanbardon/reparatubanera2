@@ -3,6 +3,7 @@ import HeroSection from '../components/HeroSection';
 import WhyChooseUs from '../components/WhyChooseUs';
 import OurServicesSection from '../components/OurServicesSection';
 import Trabajos from '../components/Trabajos';
+import CallToAction from '../components/CallToAction';
 
 
 export default function Inicio() {
@@ -11,6 +12,7 @@ export default function Inicio() {
       <HeroSection />
       <WhyChooseUs />
       <Trabajos />
+      <CallToAction />
       <OurServicesSection />
     </>
   );
