@@ -37,10 +37,10 @@ const clients = [
 
 export default function OurServicesSection() {
   return (
-    <section className="py-16 px-6 bg-background">
+    <section className="py-16 px-6 border rounded-2xl mx-4">
       <div className="container mx-auto text-center">
-        <h2 className="text-3xl font-bold text-foreground">Nuestros Servicios</h2>
-        <p className="mt-4 text-lg text-muted-foreground">
+        <h2 className="text-4xl">Nuestros Servicios</h2>
+        <p className="mt-4 text-lg">
           Ofrecemos soluciones expertas para la renovación de bañeras y sanitarios.
         </p>
       </div>
@@ -54,7 +54,7 @@ export default function OurServicesSection() {
           </div>
         ))}
       </div>
-
+      
       <div className="container mx-auto mt-16 text-center">
         <h3 className="text-2xl font-bold text-foreground">Trabajamos con Particulares y Hoteles</h3>
         <div className="mt-8 flex justify-center items-center space-x-12">

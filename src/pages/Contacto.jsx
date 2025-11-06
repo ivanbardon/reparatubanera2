@@ -21,24 +21,24 @@ const socialLinks = [
 
 export default function Contacto() {
   return (
-    <div className="bg-gray-100 flex items-center justify-center min-h-screen py-12 px-4">
-      <div className="w-full max-w-sm bg-white rounded-2xl shadow-xl p-8 text-center">
+    <div className="flex items-center justify-center min-h-screen py-24 px-4">
+      <div className="w-full max-w-sm text-center">
         
         {/* Profile Image */}
         <img 
           src="jhonny.jpeg" 
           alt="Jonatan Garcia, técnico especialista" 
-          className="w-60 h-60 rounded-full mx-auto -mt-24 border-4 border-white shadow-lg"
+          className="w-60 h-60 rounded-full mx-auto border-4 shadow-lg"
         />
 
         {/* Name & Title */}
         <div className="mt-4">
-          <h1 className="text-3xl font-bold text-gray-800">Jonatan Garcia</h1>
-          <p className="text-gray-500">Técnico Especialista</p>
+          <h1 className="text-3xl font-bold">Jonatan Garcia</h1>
+          <p className="">Técnico Especialista</p>
         </div>
 
-        {/* Bio */}
-        <div className="mt-6 text-gray-700 text-sm leading-relaxed">
+        {/* Description */}
+        <div className="mt-6 text-sm leading-relaxed">
           <p>
             ¡Hola! Soy Jonatan. Con más de 15 años de experiencia, me dedico a devolverle la vida a tu baño. Mi compromiso es ofrecer un trabajo de máxima calidad, rápido, limpio y con garantía. Tu satisfacción es mi prioridad.
           </p>
@@ -52,7 +52,7 @@ export default function Contacto() {
               href={link.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center w-full py-3 px-4 rounded-lg font-semibold transition-colors duration-300 border-2 border-zinc-500 text-zinc-500 hover:bg-zinc-500 hover:text-white"
+              className="flex items-center justify-center w-full py-3 px-4 border rounded-lg font-semibold transition-colors duration-300 hover:bg-foreground hover:text-background"
             >
               {link.icon}
               <span className="ml-3">{link.label}</span>

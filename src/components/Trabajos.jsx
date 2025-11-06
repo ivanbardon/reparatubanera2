@@ -47,7 +47,7 @@ const trabajosData = [
 
 export default function Trabajos() {
   return (
-    <section className="px-4 py-16 text-center bg-muted">
+    <section className="px-4 py-16 text-center">
       <h2 className="text-4xl mb-12">Algunos de Nuestros Trabajos</h2>
       <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
         {trabajosData.map((trabajo) => (

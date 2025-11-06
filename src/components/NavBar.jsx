@@ -1,43 +1,47 @@
-import { useEffect, useState } from "react"
+import { useState, useEffect } from "react";
+import Logo from "./Logo";
+
+const navLinks = [
+  { href: "/reparatubanera2/", text: "Inicio" },
+  { href: "/reparatubanera2/trabajos.html", text: "Trabajos" },
+  { href: "/reparatubanera2/servicios.html", text: "Servicios" },
+  { href: "/reparatubanera2/contacto.html", text: "Contacto" },
+];
 
 export default function NavBar() {
-  const [path, setPath] = useState(window.location.pathname)
+  const [currentPath, setCurrentPath] = useState(window.location.pathname);
 
   useEffect(() => {
-    const handlePathChange = () => {
-      setPath(window.location.pathname)
-    }
-
-    window.addEventListener('popstate', handlePathChange)
-
-    return () => {
-      window.removeEventListener('popstate', handlePathChange)
-    }
-  }, [])
+    const handleLocationChange = () => {
+      setCurrentPath(window.location.pathname);
+    };
+    // Escucha los cambios en el historial del navegador (botones atrás/adelante)
+    window.addEventListener("popstate", handleLocationChange);
+    return () => window.removeEventListener("popstate", handleLocationChange);
+  }, []);
 
   const getLinkClass = (href) => {
-    const baseClass = "border-b-1 transition-colors duration-300 tracking-wide";
-    // Normalize paths for comparison
-    const normalizedPath = path.endsWith('.html') ? path : `${path}index.html`;
-    const normalizedHref = href.endsWith('.html') ? href : `${href}index.html`;
-    
-    if (normalizedPath === normalizedHref || (path === '/reparatubanera2/' && href === '/reparatubanera2/')) {
-      return `${baseClass} border-foreground`;
-    }
-    return `${baseClass} border-transparent hover:border-foreground`;
+    const baseClasses = "border-b-2 transition-colors duration-300 tracking-wide";
+    // Comprueba si la ruta actual es la misma que la del enlace.
+    // El caso de "Inicio" es especial porque puede ser "/" o "/index.html".
+    const isActive = currentPath === href || (href === "/reparatubanera2/" && currentPath.endsWith("/index.html"));
+    return isActive ? `${baseClasses} border-foreground` : `${baseClasses} border-transparent hover:border-foreground`;
   };
 
   return (
-    <>
-    <nav className="fixed top-4 left-4 right-4 rounded-full border shadow-md bg-background/50 backdrop-blur-sm z-10">
+    <nav className="text-foreground fixed top-4 left-4 right-4 rounded-full border shadow-md bg-background/50 backdrop-blur-sm z-10">
       <ul className="flex space-x-4 items-center justify-center p-4">
-        <li><img src="/reparatubanera2/favicon.svg" alt="Logo" className="h-8" /></li>
-        <li><a href="/reparatubanera2/" className={getLinkClass("/reparatubanera2/")}>Inicio</a></li>
-        <li><a href="/reparatubanera2/trabajos.html" className={getLinkClass("/reparatubanera2/trabajos.html")}>Trabajos</a></li>
-        <li><a href="/reparatubanera2/servicios.html" className={getLinkClass("/reparatubanera2/servicios.html")}>Servicios</a></li>
-        <li><a href="/reparatubanera2/contacto.html" className={getLinkClass("/reparatubanera2/contacto.html")}>Contacto</a></li>
+        <li>
+          <Logo className="h-8 w-8" />
+        </li>
+        {navLinks.map((link) => (
+          <li key={link.href}>
+            <a href={link.href} className={getLinkClass(link.href)}>
+              {link.text}
+            </a>
+          </li>
+        ))}
       </ul>
     </nav>
-    </>
-  )
+  );
 }

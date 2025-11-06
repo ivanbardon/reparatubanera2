@@ -29,10 +29,13 @@ export default function Layout({ children }) {
   return (
     <>
       <NavBar />
-      <main className='pt-15'>
-        {children}
-      </main>
-      <Footer />
+      {/* Este div envuelve el contenido principal para elevarlo a una capa superior */}
+      <div className="relative z-0 bg-background">
+        <main className='pt-15'>
+          {children}
+        </main>
+        <Footer />
+      </div>
       <CookieConsent />
     </>
   )

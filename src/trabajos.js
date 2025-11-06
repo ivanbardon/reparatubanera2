@@ -1,62 +1,46 @@
-import React from 'react';
-import Layout from '../components/Layout';
-
-const trabajosData = [
+export const trabajosData = [
   {
     id: 1,
     title: "Reparación Integral de Plato de Ducha",
-    images: ["plato1e.jpg", "plato1a.jpg", "plato1b.jpg", "plato1c.jpg"],
+    shortDescription: "Proceso de reparación de grietas y esmaltado completo para devolverle su aspecto original y durabilidad.",
     fullDescription: "Este trabajo consistió en la restauración completa de un plato de ducha que presentaba múltiples grietas y desgaste general. Se realizó un proceso de saneamiento, sellado de fisuras con materiales de alta resistencia y, finalmente, un esmaltado completo en blanco brillante. El resultado es una superficie totalmente renovada, impermeable y con un acabado impecable, sin necesidad de realizar obras. El trabajo se completó en aproximadamente 4 horas, con un tiempo de secado de 24 horas para garantizar la máxima durabilidad.",
+    images: ["plato1e.jpg", "plato1a.jpg", "plato1b.jpg", "plato1c.jpg"],
+    tiempo: "3-4h",
+    obraNecesaria: "No",
+    tiempoSecado: "24h",
+    garantia: "2 años"
   },
   {
     id: 2,
     title: "Renovación y Esmaltado de Bañera",
-    images: ["banera2b.jpg", "banera1a.jpg", "banera1b.jpg", "banera2a.jpg"],
+    shortDescription: "Esmaltado profesional para bañeras con desgaste, recuperando el brillo y la suavidad de la superficie.",
     fullDescription: "La bañera mostraba signos de desgaste, falta de brillo y algunas picaduras. Nuestro equipo aplicó un esmalte profesional de poliuretano que restaura la suavidad y el brillo original. Este tratamiento no solo mejora la estética, sino que también crea una capa protectora contra el óxido y la acumulación de sarro. Es una solución rápida y económica para modernizar el baño sin obras, con una garantía de 2 años sobre el acabado.",
+    images: ["banera2b.jpg", "banera1a.jpg", "banera1b.jpg", "banera2a.jpg"],
+    tiempo: "2-3h",
+    obraNecesaria: "No",
+    tiempoSecado: "24h",
+    garantia: "2 años"
   },
   {
     id: 3,
     title: "Cambio de Color en Bañera Clásica",
-    images: ["banera1b.jpg", "baneraazul.jpeg", "banera1.jpeg", "banera1a.jpg"],
+    shortDescription: "Aplicación de esmalte de alta resistencia para un acabado como nuevo, eliminando manchas y óxido.",
     fullDescription: "El cliente deseaba modernizar su baño cambiando el color de una bañera antigua. Se procedió a un esmaltado completo con un color azul a elección, utilizando pigmentos especiales y esmalte de alta adherencia. Este proceso permite personalizar completamente los sanitarios, adaptándolos a un nuevo estilo decorativo. El acabado es uniforme, resistente a los productos de limpieza y devuelve la vida a piezas clásicas.",
+    images: ["banera1b.jpg", "baneraazul.jpeg", "banera1.jpeg", "banera1a.jpg"],
+    tiempo: "3h",
+    obraNecesaria: "No",
+    tiempoSecado: "24h",
+    garantia: "2 años"
   },
   {
     id: 4,
     title: "Reparación de Fisura en Sanitario",
-    images: ["agu1c.jpg", "agu1a.jpg", "agu1b.jpg"],
+    shortDescription: "Solución a fisuras en sanitarios con un acabado impecable y duradero, evitando fugas y mejorando la estética.",
     fullDescription: "Se reparó una fisura en un inodoro que, aunque pequeña, representaba un riesgo de fuga y un problema estético. Utilizamos un compuesto sellador específico para cerámica y porcelana, seguido de un esmaltado parcial para igualar el color y el brillo. Es una intervención rápida, de menos de 2 horas, que evita tener que reemplazar el sanitario completo, ahorrando costes y molestias.",
+    images: ["agu1c.jpg", "agu1a.jpg", "agu1b.jpg"],
+    tiempo: "1-2h",
+    obraNecesaria: "No",
+    tiempoSecado: "12h",
+    garantia: "1 año"
   }
 ];
-
-export default function TodosTrabajos() {
-  return (
-    <div className="container mx-auto px-4 py-10">
-      <div className="text-center mb-12">
-        <h1 className="text-4xl">Nuestra Galería de Trabajos</h1>
-        <p className="text-lg mt-4">Explora algunos de los proyectos que hemos realizado, transformando baños con resultados duraderos y de alta calidad.</p>
-      </div>
-
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-        {trabajosData.map((trabajo) => (
-          <div key={trabajo.id} className="border rounded-lg shadow-lg overflow-hidden">
-            <div className="p-6">
-              <h2 className="text-2xl font-bold mb-4">{trabajo.title}</h2>
-              <p className="leading-relaxed">{trabajo.fullDescription}</p>
-            </div>
-            <div className="grid grid-cols-2 gap-2 px-6 pb-6">
-              {trabajo.images.map((img, index) => (
-                <div key={index} className="overflow-hidden rounded-md">
-                  <img 
-                    src={img} 
-                    alt={`${trabajo.title} - imagen ${index + 1}`} 
-                    className="w-full h-full object-cover transform hover:scale-110 transition-transform duration-300 ease-in-out" 
-                  />
-                </div>
-              ))}
-            </div>
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-}

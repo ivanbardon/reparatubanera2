@@ -35,17 +35,17 @@ const servicesData = [
 
 export default function Servicios() {
   return (
-    <div className="bg-white">
+    <div className="">
       {/* Encabezado */}
-      <div className="text-center py-10 px-4 bg-gray-50">
-        <h1 className="text-4xl md:text-5xl text-gray-900">Nuestros Servicios</h1>
-        <p className="mt-4 text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
+      <div className="text-center py-10 px-4">
+        <h1 className="text-4xl md:text-5xl">Nuestros Servicios</h1>
+        <p className="mt-4 text-lg md:text-xl max-w-3xl mx-auto">
           Devolvemos la vida a tu baño con soluciones profesionales, rápidas y sin obras. Calidad y durabilidad garantizadas.
         </p>
       </div>
 
       {/* Lista de Servicios */}
-      <div className="container mx-auto px-4 py-20">
+      <div className="container mx-auto px-4 py-2">
         <div className="space-y-16">
           {servicesData.map((service, index) => (
             <div key={service.title} className={`flex flex-col md:flex-row items-center gap-12 ${index % 2 !== 0 ? 'md:flex-row-reverse' : ''}`}>
@@ -55,9 +55,9 @@ export default function Servicios() {
               <div className="md:w-1/2">
                 <div className="flex items-center gap-4 mb-4">
                   {service.icon}
-                  <h2 className="text-3xl font-bold text-gray-800">{service.title}</h2>
+                  <h2 className="text-3xl font-bold">{service.title}</h2>
                 </div>
-                <p className="text-gray-700 text-lg leading-relaxed">{service.description}</p>
+                <p className="text-lg leading-relaxed">{service.description}</p>
               </div>
             </div>
           ))}
@@ -66,16 +66,16 @@ export default function Servicios() {
 
       {/* Llamada a la Acción (CTA) */}
       <div className="">
-        <div className="container mx-auto px-4 py-6 bg-gray-50 text-center">
-          <h2 className="text-3xl font-bold text-gray-800">¿Listo para renovar tu baño?</h2>
-          <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
+        <div className="container mx-auto px-4 py-6 text-center">
+          <h2 className="text-3xl font-bold">¿Listo para renovar tu baño?</h2>
+          <p className="mt-4 text-lg max-w-2xl mx-auto">
             Envíanos una foto del desperfecto por WhatsApp y te daremos un presupuesto sin compromiso. ¡Es rápido, fácil y económico!
           </p>
           <a 
             href="https://wa.me/TUNUMERODEWHATSAPP" // Reemplaza con tu número
             target="_blank" 
             rel="noopener noreferrer"
-            className="mt-8 inline-block bg-transparent border-2 border-zinc-500 text-zinc-500 font-bold text-lg py-3 px-8 rounded-lg hover:bg-zinc-500 hover:text-white transition-colors duration-300"
+            className="mt-8 inline-block bg-transparent border font-bold text-lg py-3 px-8 rounded-lg"
           >
             Contactar por WhatsApp
           </a>
