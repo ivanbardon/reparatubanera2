@@ -3,7 +3,7 @@ import { HandCoins, Trophy, Zap } from 'lucide-react';
 
 export default function WhyChooseUs() {
   return (
-    <section className='px-6 mt-150 dark:bg-neutral-900 dark:text-neutral-300 dark:border-neutral-300'>
+    <section className='px-6 mt-150 bg-neutral-300 text-neutral-900 dark:bg-neutral-900 dark:text-neutral-300 dark:border-neutral-300'>
       <h2 className="text-center mt-8 text-4xl">A nosotros nos eligen porque somos</h2>
       <div className="mt-8 border bg-card rounded-2xl p-2">
         <div className="p-4">

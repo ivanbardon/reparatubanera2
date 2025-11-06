@@ -21,7 +21,7 @@ const socialLinks = [
 
 export default function Contacto() {
   return (
-    <div className="flex items-center justify-center min-h-screen py-24 px-4">
+    <div className="flex items-center justify-center min-h-screen py-24 px-4 bg-neutral-300 text-neutral-900 dark:bg-neutral-900 dark:text-neutral-300 dark:border-neutral-300">
       <div className="w-full max-w-sm text-center">
         
         {/* Profile Image */}

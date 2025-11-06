@@ -37,7 +37,7 @@ const clients = [
 
 export default function OurServicesSection() {
   return (
-    <section className="py-16 px-6 border rounded-2xl mx-4">
+    <section className=" bg-neutral-300 text-neutral-900 dark:bg-neutral-900 dark:text-neutral-300 dark:border-neutral-300">
       <div className="container mx-auto text-center">
         <h2 className="text-4xl">Nuestros Servicios</h2>
         <p className="mt-4 text-lg">

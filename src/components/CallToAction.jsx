@@ -9,8 +9,9 @@ const CallToAction = () => {
   const buttonStyle = "flex items-center justify-center gap-2 px-3 py-2 text-sm font-medium rounded-md transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 bg-primary text-primary-foreground hover:bg-primary/90";
 
   return (
-    <div className="flex justify-center my-6">
-      <div className="flex flex-row gap-2">
+    <div className="flex flex-col justify-end my-6">
+      <h2 className='text-center py-2'>La botonera de contacto</h2>
+      <div className="flex flex-row justify-center gap-4 py-4">
         <a href={`mailto:${email}`} className={buttonStyle} aria-label='Enviar correo'>
           <Mail size={18} />
           <span className="hidden sm:inline">Email</span>
