@@ -25,7 +25,7 @@ const CookieConsent = () => {
   }
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 p-4 flex flex-col md:flex-row justify-between items-center z-50 border-t  bg-neutral-300 text-neutral-900 dark:bg-neutral-900 dark:text-neutral-300 dark:border-neutral-300">
+    <div className="fixed bottom-0 left-0 right-0 p-4 flex flex-col md:flex-row justify-between items-center z-50 border-t bg-background text-foreground">
       <div className="text-sm mb-4 md:mb-0 md:mr-4 text-center md:text-left">
         <p>No utilizamos tus cookies para Nada, ni las almacenamos ni se las vendemos a nadie. Tus Cookies son tuyas.</p>
         <p className="font-bold text-center">😉</p>

@@ -54,9 +54,9 @@ export default function HeroSection() {
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-full pointer-events-none'
           }`}
         >
-          <div className="text-center py-4">
-            <h1 className='text-4xl p-2'>ReparaTuBañera</h1>
-            <p className="text-lg text-muted-foreground">Especialistas en la reparación y esmaltado de bañeras y platos de ducha.</p>
+          <div className="text-center">
+            <h1 className='text-5xl pb-4'>ReparaTuBañera</h1>
+            <p className="text-lg text-muted-foreground py-2">Especialistas en la reparación y esmaltado de bañeras y platos de ducha.</p>
           </div>
         </header>
       </div>

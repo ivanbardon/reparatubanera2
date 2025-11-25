@@ -15,18 +15,20 @@ export default {
     },
     extend: {
       fontFamily: {
+        sans: ['Montserrat', 'ui-sans-serif', 'system-ui', '-apple-system', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial'],
+        serif: ['Playfair Display', 'serif'],
         oranienbaum: ['Oranienbaum', 'serif'],
       },
       colors: {
-        border: "hsl(var(--border))",
-        background: "hsl(var(--background))",
-        foreground: "hsl(var(--foreground))",
+        border: "var(--color-border)",
+        background: "var(--color-background)",
+        foreground: "var(--color-foreground)",
         card: {
-          DEFAULT: "hsl(var(--card))",
-          foreground: "hsl(var(--card-foreground))",
+          DEFAULT: "var(--color-card)",
+          foreground: "var(--color-card-foreground)",
         },
         muted: {
-          foreground: "hsl(var(--muted-foreground))",
+          foreground: "var(--color-muted-foreground)",
         },
       },
     },

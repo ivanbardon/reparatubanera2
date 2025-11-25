@@ -35,7 +35,7 @@ const servicesData = [
 
 export default function Servicios() {
   return (
-    <div className="bg-neutral-300 text-neutral-900 dark:bg-neutral-900 dark:text-neutral-300 dark:border-neutral-300">
+    <div className="">
       {/* Encabezado */}
       <div className="text-center py-10 px-4">
         <h1 className="text-4xl md:text-5xl">Nuestros Servicios</h1>

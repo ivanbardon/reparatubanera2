@@ -1,5 +1,5 @@
 import React from 'react';
-import { Wrench, PaintBucket, Palette, ScanSearch, User, Building2 } from 'lucide-react';
+import { Wrench, PaintBucket, Palette, ScanSearch } from 'lucide-react';
 
 const services = [
   {
@@ -24,20 +24,10 @@ const services = [
   },
 ];
 
-const clients = [
-  {
-    icon: <User className="h-10 w-10 text-foreground" />,
-    name: 'Particulares',
-  },
-  {
-    icon: <Building2 className="h-10 w-10 text-foreground" />,
-    name: 'Hoteles',
-  }
-];
 
 export default function OurServicesSection() {
   return (
-    <section className=" bg-neutral-300 text-neutral-900 dark:bg-neutral-900 dark:text-neutral-300 dark:border-neutral-300">
+    <section className=" bg-background text-foreground pt-12">
       <div className="container mx-auto text-center">
         <h2 className="text-4xl">Nuestros Servicios</h2>
         <p className="mt-4 text-lg">
@@ -53,18 +43,6 @@ export default function OurServicesSection() {
             <p className="mt-2 text-muted-foreground">{service.description}</p>
           </div>
         ))}
-      </div>
-      
-      <div className="container mx-auto mt-16 text-center">
-        <h3 className="text-2xl font-bold text-foreground">Trabajamos con Particulares y Hoteles</h3>
-        <div className="mt-8 flex justify-center items-center space-x-12">
-          {clients.map((client) => (
-            <div key={client.name} className="flex flex-col items-center">
-              {client.icon}
-              <span className="mt-2 text-lg font-medium text-foreground">{client.name}</span>
-            </div>
-          ))}
-        </div>
       </div>
     </section>
   );

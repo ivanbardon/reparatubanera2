@@ -26,7 +26,7 @@ export default function TrabajoDetail({ trabajo, onBackClick }) {
           </div>
         </div>
         
-        <div className="bg-white p-6 rounded-lg shadow-md">
+        <div className=" p-6 rounded-lg shadow-md">
           <p className="text-lg text-gray-700 mb-6">{trabajo.description}</p>
           <div className="space-y-3 text-gray-600">
             <div className="flex justify-between border-b pb-2">

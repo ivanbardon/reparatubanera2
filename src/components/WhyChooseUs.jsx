@@ -3,23 +3,35 @@ import { HandCoins, Trophy, Zap } from 'lucide-react';
 
 export default function WhyChooseUs() {
   return (
-    <section className='px-6 mt-150 bg-neutral-300 text-neutral-900 dark:bg-neutral-900 dark:text-neutral-300 dark:border-neutral-300'>
-      <h2 className="text-center mt-8 text-4xl">A nosotros nos eligen porque somos</h2>
-      <div className="mt-8 border bg-card rounded-2xl p-2">
-        <div className="p-4">
-          <Zap className="h-8 w-8 text-card-foreground" />
-          <h3 className='pt-2 font-bold'>Rápidos</h3>
-          <p>Envianos por WhatsApp una foto del desperfecto junto a la localidad y te enviaremos un presupuesto sin compromiso</p>
+    <section className="px-6 mt-150 pt-2 bg-background text-foreground">
+      <h2 className="text-center mt-8 text-4xl font-serif">A nosotros nos eligen porque somos</h2>
+
+      <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+        {/* Card 1 */}
+          <div className="bg-card border rounded-2xl p-6 flex flex-col items-center text-center shadow-sm">
+            <div className="rounded-full bg-background/10 dark:bg-background/20 p-3 mb-2">
+              <Zap className="h-12 w-12 text-card-foreground" />
+            </div>
+            <h3 className="text-2xl md:text-3xl font-semibold mb-1 font-serif">Rápidos</h3>
+          <p className="text-sm text-muted-foreground max-w-lg">Envianos por WhatsApp una foto del desperfecto junto a la localidad y te enviaremos un presupuesto sin compromiso</p>
         </div>
-        <div className="p-4">
-          <Trophy className="h-8 w-8 text-card-foreground" />
-          <h3 className='pt-2 font-bold'>Lideres en el sector</h3>
-          <p>Precios competitivos sin comprometer la calidad</p>
+
+        {/* Card 2 */}
+          <div className="bg-card border rounded-2xl p-6 flex flex-col items-center text-center shadow-sm">
+            <div className="rounded-full bg-background/10 dark:bg-background/20 p-3 mb-2">
+              <Trophy className="h-12 w-12 text-card-foreground" />
+            </div>
+            <h3 className="text-2xl md:text-3xl font-semibold mb-1 font-serif">Líderes en el sector</h3>
+          <p className="text-sm text-muted-foreground max-w-lg">Precios competitivos sin comprometer la calidad</p>
         </div>
-        <div className="p-4">
-          <HandCoins className="h-8 w-8 text-card-foreground" />
-          <h3 className='pt-2 font-bold'>Económicos</h3>
-          <p>Dejar tu baño como nuevo no te costará un ojo de la cara</p>
+
+        {/* Card 3 */}
+          <div className="bg-card border rounded-2xl p-6 flex flex-col items-center text-center shadow-sm">
+            <div className="rounded-full bg-background/10 dark:bg-background/20 p-3 mb-2">
+              <HandCoins className="h-12 w-12 text-card-foreground" />
+            </div>
+            <h3 className="text-2xl md:text-3xl font-semibold mb-1 font-serif">Económicos</h3>
+          <p className="text-sm text-muted-foreground max-w-lg">Dejar tu baño como nuevo no te costará un ojo de la cara</p>
         </div>
       </div>
     </section>

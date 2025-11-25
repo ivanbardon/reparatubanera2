@@ -1,21 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&display=swap');
 @import "tailwindcss";
 
 @layer base {
   :root {
-    --background: 0 0% 100%; /* Blanco */
-    --foreground: 240 10% 3.9%; /* Negro */
-    --card: 0 0% 100%;
-    --card-foreground: 240 10% 3.9%;
-    --border: 240 5.9% 90%;
-    --muted-foreground: 240 3.8% 46.1%;
+    /* Map background/foreground to Tailwind neutral tokens */
+    --color-background: var(--color-neutral-100);
+    --color-foreground: var(--color-neutral-900);
+    --color-card: var(--color-neutral-100);
+    --color-card-foreground: var(--color-foreground);
+    --color-border: var(--color-border, var(--color-neutral-900));
+    --color-muted-foreground: var(--color-muted-foreground, var(--color-neutral-500));
+    --color-primary: var(--color-primary, var(--color-foreground));
   }
 
-  .dark {
-    --background: 240 10% 3.9%; /* Negro */
-    --foreground: 0 0% 98%; /* Blanco */
-    --card: 240 10% 3.9%;
-    --card-foreground: 0 0% 98%;
-    --border: 240 3.7% 15.9%;
-    --muted-foreground: 240 5% 64.9%;
+  :root.dark {
+    --color-background: var(--color-neutral-800);
+    --color-foreground: var(--color-neutral-100);
+    --color-card: var(--color-card, var(--color-background));
+    --color-card-foreground: var(--color-foreground);
+    --color-border: var(--color-border, var(--color-neutral-800));
+    --color-muted-foreground: var(--color-muted-foreground, var(--color-neutral-400));
+    --color-primary: var(--color-primary, var(--color-foreground));
   }
+
+  html, body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: 'Montserrat', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  }
+
+  h1, h2 {
+    font-family: 'Playfair Display', serif;
+  }
+
+  /* Global typographic scale for coherence (uses Tailwind CSS variables) */
+  h1 {
+    font-size: var(--text-4xl);
+    line-height: var(--text-4xl--line-height);
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+  }
+  @media (min-width: 48rem) {
+    h1 { font-size: var(--text-5xl); line-height: var(--text-5xl--line-height); }
+  }
+
+  h2 {
+    font-size: var(--text-3xl);
+    line-height: var(--text-3xl--line-height);
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+  }
+  @media (min-width: 48rem) {
+    h2 { font-size: var(--text-4xl); line-height: var(--text-4xl--line-height); }
+  }
+
+  h3 {
+    font-size: var(--text-2xl);
+    line-height: var(--text-2xl--line-height);
+    font-weight: 600;
+  }
+  @media (min-width: 48rem) {
+    h3 { font-size: var(--text-3xl); line-height: var(--text-3xl--line-height); }
+  }
+
+  h4 { font-size: var(--text-xl); line-height: var(--text-xl--line-height); font-weight:600; }
+  h5 { font-size: var(--text-lg); line-height: var(--text-lg--line-height); font-weight:600; }
+  h6 { font-size: var(--text-base); line-height: var(--text-base--line-height); font-weight:600; }
+
+  p { font-size: var(--text-base); line-height: var(--leading-relaxed); }
+  small { font-size: var(--text-sm); }
+
+  /* Muted text utility for descriptions */
+  .text-muted-foreground { color: var(--color-muted-foreground); }
+}
+
+@layer utilities {
+  .bg-background { background-color: var(--color-background); }
+  .text-foreground { color: var(--color-foreground); }
+  .bg-card { background-color: var(--color-card); }
+  .text-card-foreground { color: var(--color-card-foreground); }
 }

@@ -30,7 +30,7 @@ export default function Layout({ children }) {
     <>
       <NavBar />
       {/* Este div envuelve el contenido principal para elevarlo a una capa superior */}
-      <div className="relative z-0 bg-background">
+      <div className="relative z-0 bg-background text-foreground">
         <main className='pt-15'>
           {children}
         </main>
