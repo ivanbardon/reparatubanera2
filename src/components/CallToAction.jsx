@@ -8,11 +8,14 @@ const CallToAction = () => {
 
   // Button style aligned with NavBar: small, bordered, subtle background
   const ctaButton =
-    "flex items-center justify-center px-4 py-3 text-sm font-medium rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 bg-background/50 border shadow-md hover:bg-background h-14 w-14";
+    "flex items-center justify-center px-4 py-3 text-sm font-medium rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 bg-background/50 border hover:bg-background h-14 w-14";
 
   return (
-    <div className="flex flex-col items-center justify-center bg-background text-foreground">
-      <h2 className="text-center py-2 font-serif">La botonera de contacto</h2>
+    <div className="flex flex-col items-center justify-center bg-background text-foreground px-4 py-4">
+      <h2 className="text-3xl font-bold">¿Listo para renovar tu baño?</h2>
+      <p className="mt-4 text-lg max-w-2xl mx-auto">
+        Envíanos una foto del desperfecto por WhatsApp y te daremos un presupuesto sin compromiso. ¡Es rápido, fácil y económico!
+      </p>
       <div className="flex flex-row justify-center gap-10 py-6">
         <div className="flex flex-col items-center">
           <a href={`mailto:${email}`} className={ctaButton} aria-label="Enviar correo">

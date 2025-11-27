@@ -63,24 +63,6 @@ export default function Servicios() {
           ))}
         </div>
       </div>
-
-      {/* Llamada a la Acción (CTA) */}
-      <div className="">
-        <div className="container mx-auto px-4 py-6 text-center">
-          <h2 className="text-3xl font-bold">¿Listo para renovar tu baño?</h2>
-          <p className="mt-4 text-lg max-w-2xl mx-auto">
-            Envíanos una foto del desperfecto por WhatsApp y te daremos un presupuesto sin compromiso. ¡Es rápido, fácil y económico!
-          </p>
-          <a 
-            href="https://wa.me/TUNUMERODEWHATSAPP" // Reemplaza con tu número
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="mt-8 inline-block bg-transparent border font-bold text-lg py-3 px-8 rounded-lg"
-          >
-            Contactar por WhatsApp
-          </a>
-        </div>
-      </div>
     </div>
   );
 }

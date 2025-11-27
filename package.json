@@ -2,6 +2,10 @@
   "homepage": "https://ivanb.github.io/reparatubanera2",
   "name": "reparatubanera2",
   "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ivanbardon/reparatubanera2.git"
+  },
   "version": "0.0.0",
   "type": "module",
   "scripts": {
@@ -9,7 +13,7 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "deploy": "gh-pages -d dist"
+    "deploy": "npm run build && gh-pages -d dist"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.16",

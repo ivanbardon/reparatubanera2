@@ -1,49 +1,38 @@
 import React from 'react';
-import TrabajoCard from './TrabajoCard';
+import { trabajosData } from '../trabajos';
 
-// Datos de los trabajos
-const trabajosData = [
-  {
-    id: 1,
-    title: "Reparación Plato de Ducha",
-    images: ["plato1e.jpg", "plato1a.jpg", "plato1b.jpg", "plato1c.jpg"],
-    description: "Proceso de reparación de grietas y esmaltado completo para devolverle su aspecto original y durabilidad.",
-    tiempo: "3-4h",
-    obraNecesaria: "No",
-    tiempoSecado: "24h",
-    garantia: "2 años"
-  },
-  {
-    id: 2,
-    title: "Reparación Bañera",
-    images: ["banera2b.jpg", "banera1a.jpg", "banera1b.jpg", "banera2a.jpg"],
-    description: "Esmaltado profesional para bañeras con desgaste, recuperando el brillo y la suavidad de la superficie.",
-    tiempo: "2-3h",
-    obraNecesaria: "No",
-    tiempoSecado: "24h",
-    garantia: "2 años"
-  },
-  {
-    id: 3,
-    title: "Esmaltado Bañera",
-    images: ["banera1b.jpg", "baneraazul.jpeg", "banera1.jpeg", "banera1a.jpg"],
-    description: "Aplicación de esmalte de alta resistencia para un acabado como nuevo, eliminando manchas y óxido.",
-    tiempo: "3h",
-    obraNecesaria: "No",
-    tiempoSecado: "24h",
-    garantia: "2 años"
-  },
-  {
-    id: 4,
-    title: "Reparación Sanitario",
-    images: ["agu1c.jpg", "agu1a.jpg", "agu1b.jpg"],
-    description: "Solución a fisuras en sanitarios con un acabado impecable y duradero, evitando fugas y mejorando la estética.",
-    tiempo: "1-2h",
-    obraNecesaria: "No",
-    tiempoSecado: "12h",
-    garantia: "1 año"
-  }
-];
+function TrabajoCard({ trabajo }) {
+  return (
+    <a
+      href={`trabajos.html?id=${trabajo.id}`}
+      aria-label={`Ver ${trabajo.title}`}
+      className="block rounded-lg shadow-md overflow-hidden text-left border hover:shadow-lg transition-shadow duration-150 cursor-pointer"
+    >
+      <div className="relative">
+        <img src={trabajo.images?.[0]} alt={trabajo.title} className="w-full h-56 object-cover" />
+      </div>
+      <div className="p-4">
+        <h3 className="text-2xl font-semibold mb-2">{trabajo.title}</h3>
+        <p className="text-muted-foreground text-md mb-4">
+          {trabajo.shortDescription || trabajo.description}
+        </p>
+        <div className="text-sm text-muted-foreground space-y-1">
+          {Object.entries({
+            Tiempo: trabajo.tiempo,
+            'Obra necesaria': trabajo.obraNecesaria,
+            'Tiempo de secado': trabajo.tiempoSecado,
+            Garantía: trabajo.garantia
+          }).map(([label, value]) => (
+            <div key={label} className="flex justify-between">
+              <span className="font-bold">{label}:</span>
+              <span>{value}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </a>
+  );
+}
 
 export default function Trabajos() {
   return (

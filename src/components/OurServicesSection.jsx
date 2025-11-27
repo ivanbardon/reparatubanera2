@@ -37,7 +37,7 @@ export default function OurServicesSection() {
 
       <div className="container mx-auto mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         {services.map((service) => (
-          <div key={service.title} className="p-6 bg-card rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 flex flex-col items-center text-center">
+          <div key={service.title} className="p-6 flex flex-col items-center text-center">
             {service.icon}
             <h3 className="mt-4 text-xl font-semibold text-card-foreground">{service.title}</h3>
             <p className="mt-2 text-muted-foreground">{service.description}</p>

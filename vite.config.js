@@ -5,6 +5,8 @@ import tailwindcss from '@tailwindcss/vite';
 
 // https://vite.dev/config/
 export default defineConfig({
+  // For GitHub Pages (repository page) set the base to the repository name.
+  // Change this if you deploy to a different subpath or want a different default.
   base: '/reparatubanera2/',
   plugins: [
     react(),
